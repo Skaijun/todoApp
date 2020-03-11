@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#todo-1 {
+    width: 300px;
+    height: 100vh;
+    background-color: gainsboro;
+    margin: 15px;
+}
+
+#todo-2 {
+    width: 300px;
+    height: 100vh;
+    background-color: yellow;
+    margin: 15px;
+    position: absolute;
+    left: 400px;
+    top: 0px;
+}
+
+.top {
+    background-image: url("../img/task-png.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.refresh {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: red;
+    background-color: white;
+    border-radius: 20px;
+    width: 20px;
+    padding-left: 5px;
+    padding-bottom: 1px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+.refresh:before {
+    font-family: 'icomoon';
+    content: "\ea2e";
+}
+
+.refresh:hover {
+    color: blue;
+    text-shadow: 1px 1px 1px rgb(53, 53, 245);
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+.data {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: red;
+    font-weight: 700;
+    font-size: 22px;
+    text-shadow: 2px 2px 2px rgb(104, 2, 2);
+}
+
+.content {
+    height: 100%;
+    margin: 10px 13px;
+}
+
+.add-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-list {
+    margin-left: 38px;
+    margin-top: 17px;
+}
+
+.item {
+    display: inline-flex;
+    vertical-align: baseline;
+    justify-content: space-between;
+    height: 25px;
+    width: 100%;
+    padding: 0 5px;
+    margin-bottom: 10px;
+}
+
+.input-todo {
+    width: 100%;
+    margin-left: 17px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.text {
+    max-width: 160px;
+    overflow: hidden;
+}
+
+p.text {
+    text-overflow: ellipsis;
+}
+
+.btn-add, .uncomplete, .complete, .trash {
+    border-radius: 25px;
+    color: whitesmoke;
+    border: solid 1px transparent;
+    background-color: red;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 1px;
+    width: 27px;
+    font: inherit;
+    height: 23px;
+    padding-bottom: 1px;
+    transition: all ease .3s;
+}
+
+.btn-add {
+    font-weight: 900;
+}
+
+.uncomplete, .complete, .trash {
+    width: 23px;
+}
+
+.uncomplete {
+    padding-top: 2px;
+}
+
+.uncomplete:before {
+    font-family: 'icomoon';
+    content: "\e97b";
+    color: whitesmoke;
+}
+
+.btn-add:hover, .btn-add:focus {
+    opacity: 0.8;
+    background-color: rgb(104, 2, 2);
+    color: whitesmoke;
+}
+
+.complete {
+    color: black;
+    background-color: rgb(136, 219, 11);
+}
+
+.complete:before {
+    font-family: 'icomoon';
+    content: "\e900";
+    color: whitesmoke;
+}
+
+.text-complete {
+    text-decoration: line-through;
+    color: grey;
+}
+
+.trash:hover, .trash:focus {
+    color: black;
+    background-color: rgb(245, 100, 3);
+}
+
+.btn-add:active, .uncomplete:active, .complete:active, .trash:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+}
+
+.complete:hover, .uncomplete:hover, .trash:hover {
+    opacity: 0.8;
+    background-color: rgb(104, 2, 2);
+    color: whitesmoke;
+    transform: scale(1.3);
+}
