@@ -58,7 +58,7 @@ class ToDoApp {
         this.refreshBtn = currDOM.querySelector('.refresh');
     }
 
-    taskAdder() {
+    taskRendering() {
         let task = adjustInput(this.input.value);
         if (!task.length || task == null) {
             alert('Please, enter new task!!');
@@ -88,12 +88,12 @@ class ToDoApp {
 
     handleInputSubmitEvent() {
         event.preventDefault();
-        this.taskAdder();
+        this.taskRendering();
     }
 
     handleAddTaskEvent() {
         if (event.target.classList.contains('btn-add')) {
-            this.taskAdder();
+            this.taskRendering();
         }
     }
 
